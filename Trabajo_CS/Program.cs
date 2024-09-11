@@ -10,6 +10,9 @@ namespace Trabajo_CS
     {
         static void Main(string[] args)
         {
+
+            
+
         }
     }
 }
