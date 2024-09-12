@@ -34,8 +34,8 @@
             this.cbxcliente = new System.Windows.Forms.ComboBox();
             this.cbxvehiculo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // button1
@@ -98,14 +98,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Ingrese Precio";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(50, 208);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(312, 134);
-            this.listBox1.TabIndex = 6;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(28, 130);
@@ -113,13 +105,22 @@
             this.textBox1.Size = new System.Drawing.Size(128, 20);
             this.textBox1.TabIndex = 7;
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(28, 220);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(312, 134);
+            this.listView1.TabIndex = 8;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(423, 366);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbxvehiculo);
             this.Controls.Add(this.cbxcliente);
@@ -142,7 +143,7 @@
         private System.Windows.Forms.ComboBox cbxcliente;
         private System.Windows.Forms.ComboBox cbxvehiculo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListView listView1;
     }
 }
