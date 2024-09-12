@@ -30,14 +30,14 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txDineroD = new System.Windows.Forms.TextBox();
+            this.txApellidos = new System.Windows.Forms.TextBox();
+            this.txNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lwClienteLista = new System.Windows.Forms.ListView();
+            this.lvClienteLista = new System.Windows.Forms.ListView();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -46,9 +46,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnGuardar);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txDineroD);
+            this.groupBox1.Controls.Add(this.txApellidos);
+            this.groupBox1.Controls.Add(this.txNombre);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -68,26 +68,26 @@
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txDineroD
             // 
-            this.textBox3.Location = new System.Drawing.Point(74, 110);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(152, 22);
-            this.textBox3.TabIndex = 5;
+            this.txDineroD.Location = new System.Drawing.Point(74, 110);
+            this.txDineroD.Name = "txDineroD";
+            this.txDineroD.Size = new System.Drawing.Size(152, 22);
+            this.txDineroD.TabIndex = 5;
             // 
-            // textBox2
+            // txApellidos
             // 
-            this.textBox2.Location = new System.Drawing.Point(74, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 22);
-            this.textBox2.TabIndex = 4;
+            this.txApellidos.Location = new System.Drawing.Point(74, 72);
+            this.txApellidos.Name = "txApellidos";
+            this.txApellidos.Size = new System.Drawing.Size(152, 22);
+            this.txApellidos.TabIndex = 4;
             // 
-            // textBox1
+            // txNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(74, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 22);
-            this.textBox1.TabIndex = 3;
+            this.txNombre.Location = new System.Drawing.Point(74, 34);
+            this.txNombre.Name = "txNombre";
+            this.txNombre.Size = new System.Drawing.Size(152, 22);
+            this.txNombre.TabIndex = 3;
             // 
             // label3
             // 
@@ -118,7 +118,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lwClienteLista);
+            this.groupBox2.Controls.Add(this.lvClienteLista);
             this.groupBox2.Location = new System.Drawing.Point(273, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(510, 257);
@@ -126,14 +126,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Listado Clientes";
             // 
-            // lwClienteLista
+            // lvClienteLista
             // 
-            this.lwClienteLista.HideSelection = false;
-            this.lwClienteLista.Location = new System.Drawing.Point(6, 34);
-            this.lwClienteLista.Name = "lwClienteLista";
-            this.lwClienteLista.Size = new System.Drawing.Size(498, 217);
-            this.lwClienteLista.TabIndex = 0;
-            this.lwClienteLista.UseCompatibleStateImageBehavior = false;
+            this.lvClienteLista.HideSelection = false;
+            this.lvClienteLista.Location = new System.Drawing.Point(6, 34);
+            this.lvClienteLista.Name = "lvClienteLista";
+            this.lvClienteLista.Size = new System.Drawing.Size(498, 217);
+            this.lvClienteLista.TabIndex = 0;
+            this.lvClienteLista.UseCompatibleStateImageBehavior = false;
             // 
             // btnCancelar
             // 
@@ -169,11 +169,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView lwClienteLista;
+        private System.Windows.Forms.ListView lvClienteLista;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txDineroD;
+        private System.Windows.Forms.TextBox txApellidos;
+        private System.Windows.Forms.TextBox txNombre;
         private System.Windows.Forms.Button btnCancelar;
     }
 }
