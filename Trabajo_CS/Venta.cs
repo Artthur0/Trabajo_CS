@@ -21,10 +21,15 @@ namespace Trabajo_CS
         private void Form1_Load(object sender, EventArgs e)
         {
             listView1.View = View.Details;
+
             listView1.GridLines = true;
+
             listView1.Columns.Add("Cliente");
+
             listView1.Columns.Add("Vehiculo");
+
             listView1.Columns.Add("Precio");
+
             listView1.Columns.Add("Fecha");
 
 
@@ -38,7 +43,12 @@ namespace Trabajo_CS
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrWhiteSpace(tb_dinero.Text) && !decimal.TryParse(tb_dinero.Text, out _))
+            {
+                MessageBox.Show("Debes ingresar un valor válido.");
+                tb_dinero.Focus();
+                return;
+            }
         }
 
     }
