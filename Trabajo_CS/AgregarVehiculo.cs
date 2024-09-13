@@ -40,34 +40,34 @@ namespace Trabajo_CS
         {
             if (String.IsNullOrEmpty(tx_mar.Text))
             {
-                MessageBox.Show("Debes ingresar un nombre");
+                MessageBox.Show("Debes ingresar una marca");
                 tx_mar.Focus();
                 return;
             }
             if (String.IsNullOrEmpty(tx_mod.Text))
             {
-                MessageBox.Show("Debes ingresar un apellido");
+                MessageBox.Show("Debes ingresar un modelo");
                 tx_mod.Focus();
                 return;
             }
 
             if (String.IsNullOrEmpty(tx_year.Text))
             {
-                MessageBox.Show("Debes ingresar un dinerillo");
+                MessageBox.Show("Debes ingresar un año");
                 tx_year.Focus();
                 return;
             }
 
             if (String.IsNullOrEmpty(tx_kil.Text))
             {
-                MessageBox.Show("Debes ingresar un dinerillo");
+                MessageBox.Show("Debes ingresar Kilometros");
                 tx_kil.Focus();
                 return;
             }
 
             if (String.IsNullOrEmpty(tx_pre.Text))
             {
-                MessageBox.Show("Debes ingresar un dinerillo");
+                MessageBox.Show("Debes ingresar un precio");
                 tx_pre.Focus();
                 return;
             }
@@ -80,21 +80,21 @@ namespace Trabajo_CS
             bool OkP = int.TryParse(tx_pre.Text, out pre);
             if (!OkY)
             {
-                MessageBox.Show("Ingresa dinero valido");
+                MessageBox.Show("Ingresa año valido");
                 tx_year.Focus();
                 return;
             }
 
             if (!OKK)
             {
-                MessageBox.Show("Ingresa dinero valido");
+                MessageBox.Show("Ingresa Kilometro valido");
                 tx_kil.Focus();
                 return;
             }
 
             if (!OkP)
             {
-                MessageBox.Show("Ingresa dinero valido");
+                MessageBox.Show("Ingresa precio valido");
                 tx_pre.Focus();
                 return;
             }
@@ -103,7 +103,7 @@ namespace Trabajo_CS
             {
                 Marca = tx_mar.Text,
                 Modelo = tx_mod.Text,
-                Año = year,
+                Año = year ,
                 Precio = pre,
                 Kilometraje = kil
             };

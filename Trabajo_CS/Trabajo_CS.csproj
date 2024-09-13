@@ -52,14 +52,17 @@
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Clientes.cs" />
+    <Compile Include="Clases\Concesionario.cs" />
+    <Compile Include="Clases\Inventario.cs" />
     <Compile Include="Clases\Vehiculos.cs" />
-    <Compile Include="Clases\Venta.cs" />
+    <Compile Include="Clases\Ventas.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalVar.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>

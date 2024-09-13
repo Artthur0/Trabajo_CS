@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabajo_CS;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Trabajo_CS
@@ -18,8 +19,25 @@ namespace Trabajo_CS
             InitializeComponent();
         }
 
-        private void  Venta_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(tb_dinero.Text))
+            {
+                MessageBox.Show("Debes ingresar un valor válido.");
+                tb_dinero.Focus();
+                return;
+            }
+        }
+
+        void cargaVehiculos()
+        {
+            cbxvehiculo.Items.AddRange(GlobalVar.Inventario.Lista().ToArray());
+        }
+
+        private void Venta_Load(object sender, EventArgs e)
+        {
+            cargaVehiculos();
+
             listView1.View = View.Details;
 
             listView1.GridLines = true;
@@ -37,19 +55,6 @@ namespace Trabajo_CS
             {
                 column.Width = 100;
             }
-
-
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(tb_dinero.Text) && !decimal.TryParse(tb_dinero.Text, out _))
-            {
-                MessageBox.Show("Debes ingresar un valor válido.");
-                tb_dinero.Focus();
-                return;
-            }
-        }
-
     }
 }

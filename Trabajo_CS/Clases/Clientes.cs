@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Trabajo_CS.clases;
+using Trabajo_CS.Clases;
 
 namespace Trabajo_CS.Clases
 {
@@ -11,6 +13,7 @@ namespace Trabajo_CS.Clases
         public string Id { get; set; }
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
+
         public decimal DineroD { get; set; }
 
         public Clientes()
@@ -34,7 +37,7 @@ namespace Trabajo_CS.Clases
         {
             return $"{Nombre} - {Apellidos} - {DineroD}";
         }
-        /*public void ComprarVehiculo(Vehiculos vehiculo, Inventario inventario)
+        public void ComprarVehiculo(Vehiculos vehiculo, Inventario inventario)
         {
             if (DineroD >= vehiculo.Precio && inventario.ExisteVehiculo(vehiculo))
             {
@@ -46,7 +49,7 @@ namespace Trabajo_CS.Clases
             {
                 Console.WriteLine("Compra Fallida. Verifica el inventario o el dinero disponible");
             }
-        }*/
+        }
 
     }
 }
