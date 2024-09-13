@@ -11,7 +11,19 @@ namespace Trabajo_CS.Clases
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public decimal Año { get; set; }
-        public decimal Kilometraje { get; set; }
-        public decimal Precio { get; set; }
+        public int Precio { get; set; }
+        public int Kilometraje { get; set; }
+
+        public void MostrarDetalles()
+        {
+            Console.WriteLine($"Marca: {Marca}, Modelo: {Modelo}, Año: {Año},Precio:{Precio},Km:{Kilometraje}");
+
+        }
+        public string[] itemView()
+        {
+            string[] data = { Marca,
+                    Modelo, Convert.ToString(Precio) };
+            return data;
+        }
     }
 }
