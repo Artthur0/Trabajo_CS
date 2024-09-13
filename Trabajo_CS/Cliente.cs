@@ -86,5 +86,45 @@ namespace Trabajo_CS
             }*/
 
         }
+
+        private void lvClienteLista_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lvClienteLista.View = View.Details;
+            lvClienteLista.GridLines = true;
+            lvClienteLista.Columns.Add("Id");
+            lvClienteLista.Columns.Add("Nombre");
+            lvClienteLista.Columns.Add("Apellido");
+            lvClienteLista.Columns.Add("Dinero");
+
+
+            foreach (ColumnHeader column in lvClienteLista.Columns)
+            {
+                column.Width = 100;
+            }
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String id = listView1.SelectedItems[0].Text;
+            Cliente cliente_eliminar = GlobalVar.clientes.Where(x => x.Id == id).FirstOrDefault()!;
+            GlobalVar.clientes.Remove(cliente_eliminar);
+            ListarClientes();
+            MessageBox.Show("Elemento Eliminado");
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String id = listView1.SelectedItems[0].Text;
+            Cliente cliente_eliminar = GlobalVar.clientes.Where(x => x.Id == id).FirstOrDefault()!;
+            GlobalVar.clientes.Remove(cliente_eliminar);
+            ListarClientes();
+            MessageBox.Show("Elemento Modificado");
+        }
     }
 }
