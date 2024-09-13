@@ -6,24 +6,26 @@ using System.Threading.Tasks;
 
 namespace Trabajo_CS.Clases
 {
-    internal class Vehiculos
+    public class Vehiculos
     {
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public int Año { get; set; }
-        public int Precio { get; set; }
         public int Kilometraje { get; set; }
+        public int Precio { get; set; }
 
-        public void MostrarDetalles()
-        {
-            Console.WriteLine($"Marca: {Marca}, Modelo: {Modelo}, Año: {Año},Precio:{Precio},Km:{Kilometraje}");
-
-        }
         public string[] itemView()
         {
-            string[] data = { Marca,
-                    Modelo, Convert.ToString(Precio) };
-            return data;
+            return new string[] { Marca, Modelo, Año.ToString(), Kilometraje.ToString(), Precio.ToString() };
+        }
+
+        public Vehiculos()
+        {
+            Marca = "Toyota";
+            Modelo = "Corolla";
+            Año = 2020;
+            Kilometraje = 15000;
+            Precio = 20000;
         }
     }
 }

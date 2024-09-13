@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("f");
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tx_pre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -70,7 +71,7 @@
             // tx_pre
             // 
             this.tx_pre.Location = new System.Drawing.Point(111, 191);
-            this.tx_pre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_pre.Margin = new System.Windows.Forms.Padding(2);
             this.tx_pre.Name = "tx_pre";
             this.tx_pre.Size = new System.Drawing.Size(99, 22);
             this.tx_pre.TabIndex = 11;
@@ -88,7 +89,7 @@
             // tx_kil
             // 
             this.tx_kil.Location = new System.Drawing.Point(111, 154);
-            this.tx_kil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_kil.Margin = new System.Windows.Forms.Padding(2);
             this.tx_kil.Name = "tx_kil";
             this.tx_kil.Size = new System.Drawing.Size(99, 22);
             this.tx_kil.TabIndex = 9;
@@ -96,7 +97,7 @@
             // tx_year
             // 
             this.tx_year.Location = new System.Drawing.Point(111, 115);
-            this.tx_year.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_year.Margin = new System.Windows.Forms.Padding(2);
             this.tx_year.Name = "tx_year";
             this.tx_year.Size = new System.Drawing.Size(99, 22);
             this.tx_year.TabIndex = 8;
@@ -104,7 +105,7 @@
             // tx_mod
             // 
             this.tx_mod.Location = new System.Drawing.Point(111, 76);
-            this.tx_mod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_mod.Margin = new System.Windows.Forms.Padding(2);
             this.tx_mod.Name = "tx_mod";
             this.tx_mod.Size = new System.Drawing.Size(99, 22);
             this.tx_mod.TabIndex = 7;
@@ -112,7 +113,7 @@
             // tx_mar
             // 
             this.tx_mar.Location = new System.Drawing.Point(111, 39);
-            this.tx_mar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_mar.Margin = new System.Windows.Forms.Padding(2);
             this.tx_mar.Name = "tx_mar";
             this.tx_mar.Size = new System.Drawing.Size(99, 22);
             this.tx_mar.TabIndex = 6;
@@ -165,20 +166,25 @@
             // 
             // listView1
             // 
+            this.listView1.FullRowSelect = true;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(6, 19);
+            this.listView1.HoverSelection = true;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.listView1.Location = new System.Drawing.Point(17, 19);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(249, 249);
+            this.listView1.Size = new System.Drawing.Size(257, 249);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listView1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(333, 28);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(321, 28);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(274, 284);
+            this.groupBox2.Size = new System.Drawing.Size(286, 284);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Listado";

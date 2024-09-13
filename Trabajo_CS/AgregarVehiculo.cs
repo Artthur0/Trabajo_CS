@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajo_CS.Clases;
@@ -13,34 +15,26 @@ namespace Trabajo_CS
 {
     public partial class AgregarVehiculo : Form
     {
+        List<Vehiculos> vehiculo = new List<Vehiculos>();
+
         public AgregarVehiculo()
         {
             InitializeComponent();
         }
 
-        private void AgregarVehiculo_Load(object sender, EventArgs e)
+
+        void ListarVehiculos()
         {
-            listView1.View = View.Details;
-            listView1.GridLines = true;
-            listView1.Columns.Add("Marca");
-            listView1.Columns.Add("Modelo");
-            listView1.Columns.Add("Año");
-            listView1.Columns.Add("Kilometraje");
-            listView1.Columns.Add("Precio");
-
-
-            foreach (ColumnHeader column in listView1.Columns)
+            listView1.Items.Clear();
+            foreach (Vehiculos v in vehiculo)
             {
-                column.Width = 100;
+                listView1.Items.Add(new ListViewItem(v.itemView()));
             }
-
-
         }
 
 
-
         private void button1_Click(object sender, EventArgs e)
-        {/*
+        {
             if (String.IsNullOrEmpty(tx_mar.Text))
             {
                 MessageBox.Show("Debes ingresar un nombre");
@@ -76,39 +70,61 @@ namespace Trabajo_CS
             }
 
             
-            int num;
+            int year, kil, pre;
 
-            bool Ok = int.TryParse(tx_year.Text, out num);
-            if (!Ok)
+            bool OkY = int.TryParse(tx_year.Text, out year);
+            bool OKK = int.TryParse(tx_kil.Text, out kil);
+            bool OkP = int.TryParse(tx_pre.Text, out pre);
+            if (!OkY)
             {
                 MessageBox.Show("Ingresa dinero valido");
                 tx_year.Focus();
                 return;
             }
 
-            Cliente cliente = new Cliente()
+            if (!OKK)
             {
-                Nombre = tx_nombre.Text,
-                Apellidos = tx_apellido.Text,
-                DineroDisponible = lukas
+                MessageBox.Show("Ingresa dinero valido");
+                tx_kil.Focus();
+                return;
+            }
+
+            if (!OkP)
+            {
+                MessageBox.Show("Ingresa dinero valido");
+                tx_pre.Focus();
+                return;
+            }
+
+            Vehiculos vehiculos = new Vehiculos()
+            {
+                Marca = tx_mar.Text,
+                Modelo = tx_mod.Text,
+                Año = year,
+                Precio = pre,
+                Kilometraje = kil
             };
-            if (String.IsNullOrEmpty(IdGlobal))
-            {
-                GlobalVar.clientes.Add(cliente);
-                MessageBox.Show("Cliente Almacenado");
 
-            }
-            else
-            {
-                Cliente cliente_modificar
-                    = GlobalVar.clientes.Where(x => x.Id == IdGlobal).FirstOrDefault()!;
-                cliente_modificar.Nombre = tx_nombre.Text;
-                cliente_modificar.Apellidos = tx_apellido.Text;
-                cliente_modificar.DineroDisponible = Convert.ToDecimal(tx_dinero.Text);
-                IdGlobal = "";
-            }
-
-            ListarClientes();*/
+            vehiculo.Add(vehiculos);
+            MessageBox.Show("Vehiculo Almacenado");
+            ListarVehiculos();
         }
-}
+
+        private void AgregarVehiculo_Load(object sender, EventArgs e)
+        {
+            listView1.View = View.Details;
+            listView1.GridLines = true;
+            listView1.Columns.Add("Marca");
+            listView1.Columns.Add("Modelo");
+            listView1.Columns.Add("Año");
+            listView1.Columns.Add("Kilometraje");
+            listView1.Columns.Add("Precio");
+
+            foreach (ColumnHeader column in listView1.Columns)
+            {
+                column.Width = 100;
+            }
+        }
+
+    }
 }
