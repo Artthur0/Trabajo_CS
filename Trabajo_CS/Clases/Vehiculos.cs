@@ -9,6 +9,7 @@ namespace Trabajo_CS.Clases
     internal class Vehiculos
     {
         public string Marca { get; set; }
+        public string Modelo { get; set; }
         public decimal Año { get; set; }
         public string Modelo { get; set; }
         public int Kilometraje { get; set; }

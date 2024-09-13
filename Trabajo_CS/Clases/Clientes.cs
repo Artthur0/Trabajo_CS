@@ -13,7 +13,7 @@ namespace Trabajo_CS.Clases
         public string Apellidos { get; set; }
         public decimal DineroD { get; set; }
 
-        public Clientes()
+        public Cliente()
         {
             Guid guid = Guid.NewGuid();
             Id = guid.ToString();
@@ -23,6 +23,29 @@ namespace Trabajo_CS.Clases
             string[] data = {Id, Nombre,
                     Apellidos, Convert.ToString(DineroD) };
             return data;
+        }
+
+        public override string ToString()
+        {
+            return $"{Nombre} - {Apellidos}";
+        }
+
+        public string mostrarDatos()
+        {
+            return $"{Nombre} - {Apellidos} - {DineroD}";
+        }
+        public void ComprarVehiculo(Vehiculos vehiculo, Inventario inventario)
+        {
+            if (DineroD >= vehiculo.Precio && inventario.ExisteVehiculo(vehiculo))
+            {
+                inventario.EliminarVehiculo(vehiculo);
+                DineroD = DineroD - vehiculo.Precio;
+                Console.WriteLine($"{Nombre} {Apellidos} compró el auto {vehiculo.Marca} {vehiculo.Modelo}");
+            }
+            else
+            {
+                Console.WriteLine("Compra Fallida. Verifica el inventario o el dinero disponible");
+            }
         }
 
     }
