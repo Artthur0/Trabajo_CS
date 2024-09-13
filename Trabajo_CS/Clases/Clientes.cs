@@ -34,7 +34,7 @@ namespace Trabajo_CS.Clases
         {
             return $"{Nombre} - {Apellidos} - {DineroD}";
         }
-        public void ComprarVehiculo(Vehiculos vehiculo, Inventario inventario)
+        /*public void ComprarVehiculo(Vehiculos vehiculo, Inventario inventario)
         {
             if (DineroD >= vehiculo.Precio && inventario.ExisteVehiculo(vehiculo))
             {
@@ -46,7 +46,7 @@ namespace Trabajo_CS.Clases
             {
                 Console.WriteLine("Compra Fallida. Verifica el inventario o el dinero disponible");
             }
-        }
+        }*/
 
     }
 }

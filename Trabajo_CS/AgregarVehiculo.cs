@@ -26,6 +26,7 @@ namespace Trabajo_CS
             listView1.Columns.Add("Modelo");
             listView1.Columns.Add("Año");
             listView1.Columns.Add("Kilometraje");
+            listView1.Columns.Add("Precio");
 
 
             foreach (ColumnHeader column in listView1.Columns)
