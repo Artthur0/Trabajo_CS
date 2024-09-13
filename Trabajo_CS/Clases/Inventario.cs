@@ -7,7 +7,7 @@ using Trabajo_CS.Clases;
 
 namespace Trabajo_CS.clases
 {
-    /*public class Inventario
+    public class Inventario
     {
         private List<Vehiculos> Vehiculo   = new List<Vehiculos>();
 
@@ -43,5 +43,5 @@ namespace Trabajo_CS.clases
         }
 
 
-    }*/
+    }
 }
