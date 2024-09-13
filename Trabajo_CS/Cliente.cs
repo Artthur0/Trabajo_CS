@@ -15,18 +15,20 @@ namespace Trabajo_CS
     public partial class Cliente : Form
     {
         string IdGlobal = "";
+
+        List<Cliente> clientes = new List<Cliente>();
         public Cliente()
         {
             InitializeComponent();
         }
-        void ListarClientes()
+        /*void ListarClientes()
         {
             lvClienteLista.Items.Clear();
             foreach (Cliente cliente in GlobalVar.clientes)
             {
                 lvClienteLista.Items.Add(new ListViewItem(cliente.itemView()));
             }
-        }
+        }*/
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -57,14 +59,16 @@ namespace Trabajo_CS
                 txDineroD.Focus();
                 return;
             }
-
             Cliente cliente = new Cliente()
             {
-                Nombre = txNombre.Text,
-                Apellidos = txApellidos.Text,
-                DineroD = D
+                txNombre = txNombre,
+                txApellidos = txApellidos,
+                txDineroD = txDineroD
+            };
 
-            }; 
+            clientes.Add(cliente);
+            MessageBox.Show("Cliente agregado");
+            /*
             if (String.IsNullOrEmpty(IdGlobal))
             {
                 GlobalVar.clientes.Add(cliente);
@@ -79,7 +83,7 @@ namespace Trabajo_CS
                 cliente_modificar.Apellidos = tx_apellido.Text;
                 cliente_modificar.DineroDisponible = Convert.ToDecimal(tx_dinero.Text);
                 IdGlobal = "";
-            }
+            }*/
 
         }
     }
