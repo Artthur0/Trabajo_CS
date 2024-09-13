@@ -39,8 +39,8 @@ namespace Trabajo_CS
 
 
 
-        /*private void button1_Click(object sender, EventArgs e)
-        {
+        private void button1_Click(object sender, EventArgs e)
+        {/*
             if (String.IsNullOrEmpty(tx_mar.Text))
             {
                 MessageBox.Show("Debes ingresar un nombre");
@@ -108,7 +108,7 @@ namespace Trabajo_CS
                 IdGlobal = "";
             }
 
-            ListarClientes();
-        }*/
-    }
+            ListarClientes();*/
+        }
+}
 }
