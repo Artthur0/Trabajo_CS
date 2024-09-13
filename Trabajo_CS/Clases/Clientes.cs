@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trabajo_CS.Clases
 {
-    internal class Clientes
+    public class Clientes
     {
         public string Id { get; set; }
         public string Nombre { get; set; }

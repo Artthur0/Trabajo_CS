@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trabajo_CS.Clases
 {
-    public class Vehiculos
+    internal class Vehiculos
     {
         public string Marca { get; set; }
         public string Modelo { get; set; }
@@ -16,16 +16,16 @@ namespace Trabajo_CS.Clases
 
         public string[] itemView()
         {
-            return new string[] { Marca, Modelo, Año.ToString(), Kilometraje.ToString(), Precio.ToString() };
+            string[] data = { Marca,
+                    Modelo, Convert.ToString(Año), Convert.ToString(Kilometraje), Convert.ToString(Precio) };
+            return data;
         }
 
-        public Vehiculos()
+        public void MostrarDetalles()
         {
-            Marca = "Toyota";
-            Modelo = "Corolla";
-            Año = 2020;
-            Kilometraje = 15000;
-            Precio = 20000;
+            Console.WriteLine($"{Marca} - {Modelo} - {Año} - {Kilometraje} - {Precio}");
+
         }
+
     }
 }

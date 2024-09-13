@@ -15,8 +15,10 @@ namespace Trabajo_CS
 {
     public partial class AgregarVehiculo : Form
     {
+
         List<Vehiculos> vehiculo = new List<Vehiculos>();
 
+        
         public AgregarVehiculo()
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace Trabajo_CS
                 listView1.Items.Add(new ListViewItem(v.itemView()));
             }
         }
+
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -96,7 +99,7 @@ namespace Trabajo_CS
                 return;
             }
 
-            Vehiculos vehiculos = new Vehiculos()
+            Vehiculos v = new Vehiculos()
             {
                 Marca = tx_mar.Text,
                 Modelo = tx_mod.Text,
@@ -104,8 +107,7 @@ namespace Trabajo_CS
                 Precio = pre,
                 Kilometraje = kil
             };
-
-            vehiculo.Add(vehiculos);
+            vehiculo.Add(v);
             MessageBox.Show("Vehiculo Almacenado");
             ListarVehiculos();
         }
@@ -125,6 +127,5 @@ namespace Trabajo_CS
                 column.Width = 100;
             }
         }
-
     }
 }
