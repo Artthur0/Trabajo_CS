@@ -13,7 +13,7 @@ namespace Trabajo_CS.Clases
         public string Apellidos { get; set; }
         public decimal DineroD { get; set; }
 
-        public Cliente()
+        public Clientes()
         {
             Guid guid = Guid.NewGuid();
             Id = guid.ToString();
