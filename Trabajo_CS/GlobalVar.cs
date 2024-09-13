@@ -11,7 +11,7 @@ namespace Trabajo_CS
     public class GlobalVar
     {
         public static Inventario Inventario;
-       
+        public static List<Vehiculos> veh;
     }
 
 }

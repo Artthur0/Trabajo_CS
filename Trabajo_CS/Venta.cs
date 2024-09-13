@@ -31,7 +31,8 @@ namespace Trabajo_CS
 
         void cargaVehiculos()
         {
-            cbxvehiculo.Items.AddRange(GlobalVar.Inventario.Lista().ToArray());
+            cbxvehiculo.Items.AddRange(GlobalVar.veh.ToArray());
+
         }
 
         private void Venta_Load(object sender, EventArgs e)

@@ -107,7 +107,7 @@ namespace Trabajo_CS
                 Precio = pre,
                 Kilometraje = kil
             };
-            vehiculo.Add(v);
+            GlobalVar.veh.Add(v);
             MessageBox.Show("Vehiculo Almacenado");
             ListarVehiculos();
         }
