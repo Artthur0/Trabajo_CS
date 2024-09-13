@@ -13,7 +13,7 @@ namespace Trabajo_CS.clases
         public Inventario Inventario { get; set; }
         public List<Ventas> VentasRealizadas = new List<Ventas>();
 
-        public void RegistrarVenta(Vehiculos vehiculo, Clientes cliente)
+        public void RegistrarVenta(Vehiculos vehiculo, Clases.Cliente cliente)
         {
             if (cliente.DineroD >= vehiculo.Precio && Inventario.ExisteVehiculo(vehiculo))
             {
