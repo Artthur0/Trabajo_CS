@@ -16,7 +16,7 @@ namespace Trabajo_CS
     public partial class AgregarVehiculo : Form
     {
 
-        List<Vehiculos> vehiculo = new List<Vehiculos>();
+        
 
         
         public AgregarVehiculo()
@@ -28,7 +28,7 @@ namespace Trabajo_CS
         void ListarVehiculos()
         {
             listView1.Items.Clear();
-            foreach (Vehiculos v in vehiculo)
+            foreach (Vehiculos v in GlobalVar.veh)
             {
                 listView1.Items.Add(new ListViewItem(v.itemView()));
             }
@@ -99,7 +99,7 @@ namespace Trabajo_CS
                 return;
             }
 
-            Vehiculos v = new Vehiculos()
+            Vehiculos ve = new Vehiculos()
             {
                 Marca = tx_mar.Text,
                 Modelo = tx_mod.Text,
@@ -107,7 +107,7 @@ namespace Trabajo_CS
                 Precio = pre,
                 Kilometraje = kil
             };
-            GlobalVar.veh.Add(v);
+            GlobalVar.veh.Add(ve);
             MessageBox.Show("Vehiculo Almacenado");
             ListarVehiculos();
         }

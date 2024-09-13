@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Trabajo_CS.Clases;
 
-namespace Trabajo_CS.clases
+namespace Trabajo_CS.Clases
 {
     public class Inventario
     {
