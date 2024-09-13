@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tx_kil = new System.Windows.Forms.TextBox();
+            this.tx_year = new System.Windows.Forms.TextBox();
+            this.tx_mod = new System.Windows.Forms.TextBox();
+            this.tx_mar = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,19 +41,19 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tx_pre = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.tx_pre);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tx_kil);
+            this.groupBox1.Controls.Add(this.tx_year);
+            this.groupBox1.Controls.Add(this.tx_mod);
+            this.groupBox1.Controls.Add(this.tx_mar);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -67,33 +67,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vehiculo";
             // 
-            // textBox4
+            // tx_kil
             // 
-            this.textBox4.Location = new System.Drawing.Point(111, 154);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(131, 22);
-            this.textBox4.TabIndex = 9;
+            this.tx_kil.Location = new System.Drawing.Point(111, 154);
+            this.tx_kil.Name = "tx_kil";
+            this.tx_kil.Size = new System.Drawing.Size(131, 22);
+            this.tx_kil.TabIndex = 9;
             // 
-            // textBox3
+            // tx_year
             // 
-            this.textBox3.Location = new System.Drawing.Point(111, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(131, 22);
-            this.textBox3.TabIndex = 8;
+            this.tx_year.Location = new System.Drawing.Point(111, 112);
+            this.tx_year.Name = "tx_year";
+            this.tx_year.Size = new System.Drawing.Size(131, 22);
+            this.tx_year.TabIndex = 8;
             // 
-            // textBox2
+            // tx_mod
             // 
-            this.textBox2.Location = new System.Drawing.Point(111, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 22);
-            this.textBox2.TabIndex = 7;
+            this.tx_mod.Location = new System.Drawing.Point(111, 73);
+            this.tx_mod.Name = "tx_mod";
+            this.tx_mod.Size = new System.Drawing.Size(131, 22);
+            this.tx_mod.TabIndex = 7;
             // 
-            // textBox1
+            // tx_mar
             // 
-            this.textBox1.Location = new System.Drawing.Point(111, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 22);
-            this.textBox1.TabIndex = 6;
+            this.tx_mar.Location = new System.Drawing.Point(111, 39);
+            this.tx_mar.Name = "tx_mar";
+            this.tx_mar.Size = new System.Drawing.Size(131, 22);
+            this.tx_mar.TabIndex = 6;
             // 
             // button1
             // 
@@ -170,12 +170,12 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Precio:";
             // 
-            // textBox5
+            // tx_pre
             // 
-            this.textBox5.Location = new System.Drawing.Point(111, 195);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(131, 22);
-            this.textBox5.TabIndex = 11;
+            this.tx_pre.Location = new System.Drawing.Point(111, 195);
+            this.tx_pre.Name = "tx_pre";
+            this.tx_pre.Size = new System.Drawing.Size(131, 22);
+            this.tx_pre.TabIndex = 11;
             // 
             // AgregarVehiculo
             // 
@@ -196,10 +196,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tx_kil;
+        private System.Windows.Forms.TextBox tx_year;
+        private System.Windows.Forms.TextBox tx_mod;
+        private System.Windows.Forms.TextBox tx_mar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -207,7 +207,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tx_pre;
         private System.Windows.Forms.Label label5;
     }
 }

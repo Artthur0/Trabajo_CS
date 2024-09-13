@@ -10,7 +10,7 @@ namespace Trabajo_CS.Clases
     {
         public string Marca { get; set; }
         public string Modelo { get; set; }
-        public decimal Año { get; set; }
+        public int Año { get; set; }
         public int Precio { get; set; }
         public int Kilometraje { get; set; }
 

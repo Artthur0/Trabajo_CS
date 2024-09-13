@@ -39,9 +39,76 @@ namespace Trabajo_CS
 
 
 
-        private void button1_Click(object sender, EventArgs e)
+        /*private void button1_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(tx_mar.Text))
+            {
+                MessageBox.Show("Debes ingresar un nombre");
+                tx_mar.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(tx_mod.Text))
+            {
+                MessageBox.Show("Debes ingresar un apellido");
+                tx_mod.Focus();
+                return;
+            }
 
-        }
+            if (String.IsNullOrEmpty(tx_year.Text))
+            {
+                MessageBox.Show("Debes ingresar un dinerillo");
+                tx_year.Focus();
+                return;
+            }
+
+            if (String.IsNullOrEmpty(tx_kil.Text))
+            {
+                MessageBox.Show("Debes ingresar un dinerillo");
+                tx_kil.Focus();
+                return;
+            }
+
+            if (String.IsNullOrEmpty(tx_pre.Text))
+            {
+                MessageBox.Show("Debes ingresar un dinerillo");
+                tx_pre.Focus();
+                return;
+            }
+
+            
+            int num;
+
+            bool Ok = int.TryParse(tx_year.Text, out num);
+            if (!Ok)
+            {
+                MessageBox.Show("Ingresa dinero valido");
+                tx_year.Focus();
+                return;
+            }
+
+            Cliente cliente = new Cliente()
+            {
+                Nombre = tx_nombre.Text,
+                Apellidos = tx_apellido.Text,
+                DineroDisponible = lukas
+            };
+            if (String.IsNullOrEmpty(IdGlobal))
+            {
+                GlobalVar.clientes.Add(cliente);
+                MessageBox.Show("Cliente Almacenado");
+
+            }
+            else
+            {
+                Cliente cliente_modificar
+                    = GlobalVar.clientes.Where(x => x.Id == IdGlobal).FirstOrDefault()!;
+                cliente_modificar.Nombre = tx_nombre.Text;
+                cliente_modificar.Apellidos = tx_apellido.Text;
+                cliente_modificar.DineroDisponible = Convert.ToDecimal(tx_dinero.Text);
+                IdGlobal = "";
+            }
+
+            ListarClientes();
+        }*/
     }
 }

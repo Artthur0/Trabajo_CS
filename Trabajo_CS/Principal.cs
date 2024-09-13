@@ -17,9 +17,27 @@ namespace Trabajo_CS
             InitializeComponent();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
 
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cliente formcliente = new Cliente();
+            formcliente.MdiParent = this.MdiParent;
+            formcliente.Show();
+        }
+
+        private void vehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarVehiculo formcliente = new AgregarVehiculo();
+            formcliente.MdiParent = this.MdiParent;
+            formcliente.Show();
+        }
+
+        private void crearVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Venta formcliente = new Venta();
+            formcliente.MdiParent = this.MdiParent;
+            formcliente.Show();
         }
     }
 }
