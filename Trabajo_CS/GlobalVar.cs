@@ -12,6 +12,8 @@ namespace Trabajo_CS
     {
         public static Inventario Inventario;
         public static List<Vehiculos> veh;
+        public static List<Cliente> clientes;
+        
     }
 
 }
