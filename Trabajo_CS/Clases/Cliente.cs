@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Trabajo_CS.clases;
-using Trabajo_CS.Clases;
 
 namespace Trabajo_CS.Clases
 {
@@ -21,6 +19,7 @@ namespace Trabajo_CS.Clases
             Guid guid = Guid.NewGuid();
             Id = guid.ToString();
         }
+
         public string[] itemView()
         {
             string[] data = {Id, Nombre,

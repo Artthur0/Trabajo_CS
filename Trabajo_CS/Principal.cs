@@ -21,7 +21,7 @@ namespace Trabajo_CS
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cliente formcliente = new Cliente();
+            AgregarCliente formcliente = new AgregarCliente();
             formcliente.MdiParent = this.MdiParent;
             formcliente.Show();
         }
