@@ -9,7 +9,7 @@ namespace Trabajo_CS.Clases
     public class Ventas
     {
         public Vehiculos VehiculoVendido { get; set; }
-        public Clientes Clientes { get; set; }
+        public Cliente Clientes { get; set; }
         public decimal PrecioVenta { get; set; }
         public DateTime FechaVenta { get; set; }
 

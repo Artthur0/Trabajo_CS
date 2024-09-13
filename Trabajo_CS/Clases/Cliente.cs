@@ -8,7 +8,7 @@ using Trabajo_CS.Clases;
 
 namespace Trabajo_CS.Clases
 {
-    public class Clientes
+    public class Cliente
     {
         public string Id { get; set; }
         public string Nombre { get; set; }
@@ -16,7 +16,7 @@ namespace Trabajo_CS.Clases
 
         public decimal DineroD { get; set; }
 
-        public Clientes()
+        public Cliente()
         {
             Guid guid = Guid.NewGuid();
             Id = guid.ToString();
