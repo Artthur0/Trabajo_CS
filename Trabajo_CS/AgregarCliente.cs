@@ -132,7 +132,7 @@ namespace Trabajo_CS
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //String id = lvClienteLista.SelectedItems[0].Text;
+            //String id = lvClienteLista.SelectedItems[0].Text;z
             //IdGlobal = id;
             //Cliente cliente_modificar = GlobalVar.client.Where(x => x.Id == id).FirstOrDefault()!;
             //txNombre.Text = cliente_modificar.Nombre;
