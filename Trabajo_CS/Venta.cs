@@ -22,6 +22,7 @@ namespace Trabajo_CS
         private void Venta_Load(object sender, EventArgs e)
         {
             cargaVehiculos();
+            cargaCliente();
 
             listView1.View = View.Details;
 
@@ -46,6 +47,11 @@ namespace Trabajo_CS
         {
             cbxvehiculo.Items.AddRange(GlobalVar.veh.ToArray());
 
+        }
+
+        void cargaCliente()
+        {
+            cbxcliente.Items.AddRange(GlobalVar.client.ToArray());
         }
 
         private void button1_Click(object sender, EventArgs e)
