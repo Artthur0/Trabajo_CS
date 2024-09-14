@@ -24,7 +24,7 @@ namespace Trabajo_CS
         void ListarClientes()
         {
             lvClienteLista.Items.Clear();
-            foreach (Cliente clie in GlobalVar.client)
+            foreach (Cliente clie in GlobalVar.clientes)
             {
                 lvClienteLista.Items.Add(new ListViewItem(clie.itemView()));
             }
@@ -68,13 +68,13 @@ namespace Trabajo_CS
 
             if (String.IsNullOrEmpty(IdGlobal))
             {
-                GlobalVar.client.Add(cliente);
+                GlobalVar.clientes.Add(cliente);
                 MessageBox.Show("Cliente Almacenado");
             }
             else
             {
                 // No usar el operador "!" para forzar nulabilidad.
-                Cliente cliente_modificar = GlobalVar.client.Where(x => x.Id == IdGlobal).FirstOrDefault();
+                Cliente cliente_modificar = GlobalVar.clientes.Where(x => x.Id == IdGlobal).FirstOrDefault();
 
                 // Verifica si se encontró un cliente antes de modificarlo.
                 if (cliente_modificar != null)
@@ -119,6 +119,24 @@ namespace Trabajo_CS
             {
                 column.Width = 100;
             }
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String id = lvClienteLista.SelectedItems[0].Text;
+            Cliente cliente_eliminar = GlobalVar.clientes.Where(x => x.Id == id).FirstOrDefault()!;
+            GlobalVar.clientes.Remove(cliente_eliminar);
+            ListarClientes();
+            MessageBox.Show("Elemento eliminado");
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String id = lvClienteLista.SelectedItems[0].Text;
+            Cliente cliente_eliminar = GlobalVar.clientes.Where(x => x.Id == id).FirstOrDefault()!;
+            GlobalVar.clientes.Remove(cliente_eliminar);
+            ListarClientes();
+            MessageBox.Show("Elemento eliminado");
         }
     }
 }
