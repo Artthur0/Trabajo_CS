@@ -73,32 +73,12 @@ namespace Trabajo_CS
             }
             else
             {
-                // No usar el operador "!" para forzar nulabilidad.
-                Cliente cliente_modificar = GlobalVar.client.Where(x => x.Id == IdGlobal).FirstOrDefault();
-
-                // Verifica si se encontró un cliente antes de modificarlo.
-                if (cliente_modificar != null)
-                {
-                    cliente_modificar.Nombre = txNombre.Text;
-                    cliente_modificar.Apellidos = txApellidos.Text;
-
-                    // Usa TryParse para manejar errores en la conversión de dinero.
-                    decimal dineroDisponible;
-                    if (decimal.TryParse(txDineroD.Text, out dineroDisponible))
-                    {
-                        cliente_modificar.DineroD = dineroDisponible;
-                    }
-                    else
-                    {
-                        MessageBox.Show("El valor ingresado en Dinero no es válido.");
-                    }
-
-                    IdGlobal = "";
-                }
-                else
-                {
-                    MessageBox.Show("No se encontró un cliente con ese ID.");
-                }
+                Cliente cliente_modificar
+                    = GlobalVar.client.Where(x => x.Id == IdGlobal).FirstOrDefault();
+                cliente_modificar.Nombre = txNombre.Text;
+                cliente_modificar.Apellidos = txApellidos.Text;
+                cliente_modificar.DineroD = Convert.ToDecimal(txDineroD.Text);
+                IdGlobal = "";
             }
 
 
@@ -123,22 +103,28 @@ namespace Trabajo_CS
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //String id = lvClienteLista.SelectedItems[0].Text;
-            //Cliente cliente_eliminar = GlobalVar.client.Where(x => x.Id == id).FirstOrDefault()!;
-            //GlobalVar.client.Remove(cliente_eliminar);
-            //ListarClientes();
-            //MessageBox.Show("Elemento eliminado");
+            String id = lvClienteLista.SelectedItems[0].Text;
+            Cliente cliente_eliminar = GlobalVar.client.Where(x => x.Id == id).FirstOrDefault();
+            GlobalVar.client.Remove(cliente_eliminar);
+            ListarClientes();
+            MessageBox.Show("Elemento eliminado");
         }
 
-        }
+        
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             String id = lvClienteLista.SelectedItems[0].Text;
-            Cliente cliente_eliminar = GlobalVar.clientes.Where(x => x.Id == id).FirstOrDefault()!;
-            GlobalVar.clientes.Remove(cliente_eliminar);
-            ListarClientes();
-            MessageBox.Show("Elemento eliminado");
+            IdGlobal = id;
+            Cliente cliente_modificar = GlobalVar.client.Where(x => x.Id == id).FirstOrDefault();
+            txNombre.Text = cliente_modificar.Nombre;
+            txApellidos.Text = cliente_modificar.Apellidos;
+            txDineroD.Text = Convert.ToString(cliente_modificar.DineroD);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
