@@ -24,7 +24,7 @@ namespace Trabajo_CS
         void ListarClientes()
         {
             lvClienteLista.Items.Clear();
-            foreach (Cliente clie in GlobalVar.clientes)
+            foreach (Cliente clie in GlobalVar.client)
             {
                 lvClienteLista.Items.Add(new ListViewItem(clie.itemView()));
             }
@@ -68,13 +68,13 @@ namespace Trabajo_CS
 
             if (String.IsNullOrEmpty(IdGlobal))
             {
-                GlobalVar.clientes.Add(cliente);
+                GlobalVar.client.Add(cliente);
                 MessageBox.Show("Cliente Almacenado");
             }
             else
             {
                 // No usar el operador "!" para forzar nulabilidad.
-                Cliente cliente_modificar = GlobalVar.clientes.Where(x => x.Id == IdGlobal).FirstOrDefault();
+                Cliente cliente_modificar = GlobalVar.client.Where(x => x.Id == IdGlobal).FirstOrDefault();
 
                 // Verifica si se encontró un cliente antes de modificarlo.
                 if (cliente_modificar != null)
@@ -124,19 +124,42 @@ namespace Trabajo_CS
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             String id = lvClienteLista.SelectedItems[0].Text;
-            Cliente cliente_eliminar = GlobalVar.clientes.Where(x => x.Id == id).FirstOrDefault()!;
-            GlobalVar.clientes.Remove(cliente_eliminar);
-            ListarClientes();
-            MessageBox.Show("Elemento eliminado");
+
+            // No usar el operador "!" para forzar nulabilidad.
+            Cliente cliente_eliminar = GlobalVar.client.Where(x => x.Id == id).FirstOrDefault();
+
+            // Verifica si se encontró el cliente antes de intentar eliminarlo.
+            if (cliente_eliminar != null)
+            {
+                GlobalVar.client.Remove(cliente_eliminar);
+                ListarClientes();
+                MessageBox.Show("Elemento eliminado");
+            }
+            else
+            {
+                MessageBox.Show("No se encontró un cliente con ese ID.");
+            }
+
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             String id = lvClienteLista.SelectedItems[0].Text;
-            Cliente cliente_eliminar = GlobalVar.clientes.Where(x => x.Id == id).FirstOrDefault()!;
-            GlobalVar.clientes.Remove(cliente_eliminar);
-            ListarClientes();
-            MessageBox.Show("Elemento eliminado");
+
+            // No usar el operador "!" para forzar nulabilidad.
+            Cliente cliente_eliminar = GlobalVar.client.Where(x => x.Id == id).FirstOrDefault();
+
+            // Verifica si se encontró el cliente antes de intentar eliminarlo.
+            if (cliente_eliminar != null)
+            {
+                GlobalVar.client.Remove(cliente_eliminar);
+                ListarClientes();
+                MessageBox.Show("Elemento eliminado");
+            }
+            else
+            {
+                MessageBox.Show("No se encontró un cliente con ese ID.");
+            }
         }
     }
 }
