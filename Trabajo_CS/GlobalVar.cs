@@ -10,8 +10,8 @@ namespace Trabajo_CS
     public class GlobalVar
     {
         public static Inventario Inventario;
-        public static List<Vehiculos> veh;
-        public static List<Cliente> clientes;
+        public static List<Vehiculos> veh = new List<Vehiculos>();
+        public static List<Cliente> client;
         
     }
 

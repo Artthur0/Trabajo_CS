@@ -28,9 +28,10 @@ namespace Trabajo_CS
         void ListarVehiculos()
         {
             listView1.Items.Clear();
-            foreach (Vehiculos v in GlobalVar.veh)
+            foreach (Vehiculos vehiculo in GlobalVar.veh)
             {
-                listView1.Items.Add(new ListViewItem(v.itemView()));
+                // Agregar los detalles del vehículo a la ListView
+                listView1.Items.Add(new ListViewItem(vehiculo.itemView()));
             }
         }
 
@@ -99,7 +100,7 @@ namespace Trabajo_CS
                 return;
             }
 
-            Vehiculos ve = new Vehiculos()
+            Vehiculos vehiculoNuevo = new Vehiculos()
             {
                 Marca = tx_mar.Text,
                 Modelo = tx_mod.Text,
@@ -107,7 +108,7 @@ namespace Trabajo_CS
                 Precio = pre,
                 Kilometraje = kil
             };
-            GlobalVar.veh.Add(ve);
+            GlobalVar.veh.Add(vehiculoNuevo);
             MessageBox.Show("Vehiculo Almacenado");
             ListarVehiculos();
         }

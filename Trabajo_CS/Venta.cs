@@ -19,24 +19,6 @@ namespace Trabajo_CS
             InitializeComponent();
         }
 
-        
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(tb_dinero.Text))
-            {
-                MessageBox.Show("Debes ingresar un valor válido.");
-                tb_dinero.Focus();
-                return;
-            }
-        }
-
-        void cargaVehiculos()
-        {
-            cbxvehiculo.Items.AddRange(GlobalVar.veh.ToArray());
-
-        }
-
         private void Venta_Load(object sender, EventArgs e)
         {
             cargaVehiculos();
@@ -59,5 +41,25 @@ namespace Trabajo_CS
                 column.Width = 100;
             }
         }
+
+        void cargaVehiculos()
+        {
+            cbxvehiculo.Items.AddRange(GlobalVar.veh.ToArray());
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(tb_dinero.Text))
+            {
+                MessageBox.Show("Debes ingresar un valor válido.");
+                tb_dinero.Focus();
+                return;
+            }
+        }
+
+
+
+
     }
 }
