@@ -123,43 +123,22 @@ namespace Trabajo_CS
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String id = lvClienteLista.SelectedItems[0].Text;
-
-            // No usar el operador "!" para forzar nulabilidad.
-            Cliente cliente_eliminar = GlobalVar.client.Where(x => x.Id == id).FirstOrDefault();
-
-            // Verifica si se encontró el cliente antes de intentar eliminarlo.
-            if (cliente_eliminar != null)
-            {
-                GlobalVar.client.Remove(cliente_eliminar);
-                ListarClientes();
-                MessageBox.Show("Elemento eliminado");
-            }
-            else
-            {
-                MessageBox.Show("No se encontró un cliente con ese ID.");
-            }
+            //String id = lvClienteLista.SelectedItems[0].Text;
+            //Cliente cliente_eliminar = GlobalVar.client.Where(x => x.Id == id).FirstOrDefault()!;
+            //GlobalVar.client.Remove(cliente_eliminar);
+            //ListarClientes();
+            //MessageBox.Show("Elemento eliminado");
+        }
 
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             String id = lvClienteLista.SelectedItems[0].Text;
-
-            // No usar el operador "!" para forzar nulabilidad.
-            Cliente cliente_eliminar = GlobalVar.client.Where(x => x.Id == id).FirstOrDefault();
-
-            // Verifica si se encontró el cliente antes de intentar eliminarlo.
-            if (cliente_eliminar != null)
-            {
-                GlobalVar.client.Remove(cliente_eliminar);
-                ListarClientes();
-                MessageBox.Show("Elemento eliminado");
-            }
-            else
-            {
-                MessageBox.Show("No se encontró un cliente con ese ID.");
-            }
+            Cliente cliente_eliminar = GlobalVar.clientes.Where(x => x.Id == id).FirstOrDefault()!;
+            GlobalVar.clientes.Remove(cliente_eliminar);
+            ListarClientes();
+            MessageBox.Show("Elemento eliminado");
         }
     }
 }
