@@ -130,14 +130,15 @@ namespace Trabajo_CS
             //MessageBox.Show("Elemento eliminado");
         }
 
+        }
+
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //String id = lvClienteLista.SelectedItems[0].Text;z
-            //IdGlobal = id;
-            //Cliente cliente_modificar = GlobalVar.client.Where(x => x.Id == id).FirstOrDefault()!;
-            //txNombre.Text = cliente_modificar.Nombre;
-            //txApellidos.Text = cliente_modificar.Apellidos;
-            //txDineroD.Text = Convert.ToString(cliente_modificar.DineroD);
+            String id = lvClienteLista.SelectedItems[0].Text;
+            Cliente cliente_eliminar = GlobalVar.clientes.Where(x => x.Id == id).FirstOrDefault()!;
+            GlobalVar.clientes.Remove(cliente_eliminar);
+            ListarClientes();
+            MessageBox.Show("Elemento eliminado");
         }
     }
 }
