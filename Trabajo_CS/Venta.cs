@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajo_CS;
+using Trabajo_CS.Clases;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Trabajo_CS
@@ -62,6 +63,14 @@ namespace Trabajo_CS
                 tb_dinero.Focus();
                 return;
             }
+            else
+            {
+                //Cliente clienteSeleccionado = cbxcliente.SelectedItem as Cliente;
+                //Vehiculos vehiculoSeleccionado = cbxvehiculo.SelectedItem as Vehiculos;
+                //GlobalVar.Concesionario.RegistrarVenta(vehiculoSeleccionado, clienteSeleccionado);
+            }
+
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
