@@ -27,5 +27,10 @@ namespace Trabajo_CS.Clases
 
         }
 
+        public override string ToString()
+        {
+            return $"{Marca} - {Modelo} - {Año}";
+        }
+
     }
 }
