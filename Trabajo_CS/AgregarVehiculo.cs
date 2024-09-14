@@ -128,5 +128,10 @@ namespace Trabajo_CS
                 column.Width = 100;
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
