@@ -52,7 +52,7 @@ namespace Trabajo_CS
             }
 
             decimal D;
-            bool isOk = decimal.TryParse(txDineroD.Text,out D);
+            bool isOk = decimal.TryParse(txDineroD.Text, out D);
             if (!isOk)
             {
                 MessageBox.Show("Ingresa dinero valido");
@@ -120,16 +120,8 @@ namespace Trabajo_CS
                 MessageBox.Show("No se encontró un cliente con ese ID.");
             }
 
-        
-
-        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            String id = lvClienteLista.SelectedItems[0].Text;
-            Cliente cliente_eliminar = GlobalVar.clientes.Where(x => x.Id == id).FirstOrDefault()!;
-            GlobalVar.clientes.Remove(cliente_eliminar);
-            ListarClientes();
-            MessageBox.Show("Elemento eliminado");
         }
-    }
+    } 
 }
+
 
