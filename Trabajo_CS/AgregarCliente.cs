@@ -79,8 +79,8 @@ namespace Trabajo_CS
                 cliente_modificar.Apellidos = txApellidos.Text;
                 cliente_modificar.DineroD = Convert.ToDecimal(txDineroD.Text);
                 IdGlobal = "";
+                MessageBox.Show("Cliente Modificado");
             }
-
 
             ListarClientes();
         }
@@ -108,18 +108,26 @@ namespace Trabajo_CS
             // No usar el operador "!" para forzar nulabilidad.
             Cliente cliente_eliminar = GlobalVar.client.Where(x => x.Id == id).FirstOrDefault();
 
-            // Verifica si se encontró el cliente antes de intentar eliminarlo.
-            if (cliente_eliminar != null)
-            {
                 GlobalVar.client.Remove(cliente_eliminar);
                 ListarClientes();
                 MessageBox.Show("Elemento eliminado");
-            }
-            else
-            {
-                MessageBox.Show("No se encontró un cliente con ese ID.");
-            }
+            
 
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String id = lvClienteLista.SelectedItems[0].Text;
+            IdGlobal = id;
+            Cliente cliente_modificar = GlobalVar.client.Where(x => x.Id == id).FirstOrDefault();
+            txNombre.Text = cliente_modificar.Nombre;
+            txApellidos.Text = cliente_modificar.Apellidos;
+            txDineroD.Text = Convert.ToString(cliente_modificar.DineroD);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     } 
 }

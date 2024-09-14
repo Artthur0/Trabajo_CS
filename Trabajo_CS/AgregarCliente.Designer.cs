@@ -39,10 +39,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lvClienteLista = new System.Windows.Forms.ListView();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -57,21 +57,21 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(191, 209);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(255, 257);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Cliente";
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(113, 185);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(151, 228);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(56, 19);
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -79,66 +79,63 @@
             // 
             // txDineroD
             // 
-            this.txDineroD.Location = new System.Drawing.Point(56, 89);
-            this.txDineroD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txDineroD.Location = new System.Drawing.Point(75, 110);
+            this.txDineroD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txDineroD.Name = "txDineroD";
-            this.txDineroD.Size = new System.Drawing.Size(115, 20);
+            this.txDineroD.Size = new System.Drawing.Size(152, 22);
             this.txDineroD.TabIndex = 5;
             // 
             // txApellidos
             // 
-            this.txApellidos.Location = new System.Drawing.Point(56, 58);
-            this.txApellidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txApellidos.Location = new System.Drawing.Point(75, 71);
+            this.txApellidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txApellidos.Name = "txApellidos";
-            this.txApellidos.Size = new System.Drawing.Size(115, 20);
+            this.txApellidos.Size = new System.Drawing.Size(152, 22);
             this.txApellidos.TabIndex = 4;
             // 
             // txNombre
             // 
-            this.txNombre.Location = new System.Drawing.Point(56, 28);
-            this.txNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txNombre.Location = new System.Drawing.Point(75, 34);
+            this.txNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txNombre.Name = "txNombre";
-            this.txNombre.Size = new System.Drawing.Size(115, 20);
+            this.txNombre.Size = new System.Drawing.Size(152, 22);
             this.txNombre.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 89);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(5, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Dinero: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 58);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(5, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Apellidos: ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(5, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre: ";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lvClienteLista);
-            this.groupBox2.Location = new System.Drawing.Point(205, 10);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(273, 12);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(382, 209);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(509, 257);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Listado Clientes";
@@ -148,22 +145,12 @@
             this.lvClienteLista.ContextMenuStrip = this.contextMenuStrip1;
             this.lvClienteLista.FullRowSelect = true;
             this.lvClienteLista.HideSelection = false;
-            this.lvClienteLista.Location = new System.Drawing.Point(4, 28);
-            this.lvClienteLista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvClienteLista.Location = new System.Drawing.Point(5, 34);
+            this.lvClienteLista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvClienteLista.Name = "lvClienteLista";
-            this.lvClienteLista.Size = new System.Drawing.Size(374, 177);
+            this.lvClienteLista.Size = new System.Drawing.Size(497, 217);
             this.lvClienteLista.TabIndex = 0;
             this.lvClienteLista.UseCompatibleStateImageBehavior = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(517, 247);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(56, 19);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // contextMenuStrip1
             // 
@@ -172,31 +159,42 @@
             this.eliminarToolStripMenuItem,
             this.modificarToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(126, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(147, 56);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.modificarToolStripMenuItem.Text = "Modificar";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(689, 304);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // AgregarCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 275);
+            this.ClientSize = new System.Drawing.Size(795, 338);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AgregarCliente";
             this.Text = "Cliente";
             this.Load += new System.EventHandler(this.AgregarCliente_Load);
