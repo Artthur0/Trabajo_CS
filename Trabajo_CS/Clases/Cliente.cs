@@ -50,5 +50,13 @@ namespace Trabajo_CS.Clases
             }
         }
 
+        public void clientes(){
+        
+        
+        
+        
+        }
+
+
     }
 }
