@@ -16,35 +16,35 @@ namespace Trabajo_CS.Clases
 
        static void Concesionario()
        {
-            RegistrarVenta(Vehiculos vehiculo, Cliente cliente)
-            {
-                if (cliente.DineroDisponible >= vehiculo.Precio && Inventario.ExisteVehiculo(vehiculo))
-                {
-                    Venta nuevaVenta = new Venta()
-                    {
-                        VehiculoVendido = vehiculo,
-                        Cliente = cliente,
-                        PrecioVenta = vehiculo.Precio,
-                        FechaVenta = DateTime.Now
+            //RegistrarVenta(Vehiculos vehiculo, Cliente cliente)
+            //{
+            //    if (cliente.DineroDisponible >= vehiculo.Precio && Inventario.ExisteVehiculo(vehiculo))
+            //    {
+            //        Venta nuevaVenta = new Venta()
+            //        {
+            //            VehiculoVendido = vehiculo,
+            //            Cliente = cliente,
+            //            PrecioVenta = vehiculo.Precio,
+            //            FechaVenta = DateTime.Now
 
-                    };
+            //        };
 
-                    VentasRealizadas.Add(nuevaVenta);
-                    cliente.ComprarVehiculo(vehiculo, Inventario);
-                }
-                else
-                {
-                    MessageBox.Show("Verifique tener el monto o que el vehiculo se encuentre disponible");
-                }
-            }
+            //        VentasRealizadas.Add(nuevaVenta);
+            //        cliente.ComprarVehiculo(vehiculo, Inventario);
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Verifique tener el monto o que el vehiculo se encuentre disponible");
+            //    }
+            //}
 
-            public void MostrarHistorialVentas()
-            {
-                foreach (var venta in VentasRealizadas)
-                {
-                    venta.MostrarDetalleVenta();
-                }
-            }
+            //public void MostrarHistorialVentas()
+            //{
+            //    foreach (var venta in VentasRealizadas)
+            //    {
+            //        venta.MostrarDetalleVenta();
+            //    }
+            //}
 
         }
 
