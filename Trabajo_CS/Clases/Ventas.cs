@@ -14,39 +14,7 @@ namespace Trabajo_CS.Clases
         public decimal PrecioVenta { get; set; }
         public DateTime FechaVenta { get; set; }
 
-       static void Concesionario()
-       {
-            //RegistrarVenta(Vehiculos vehiculo, Cliente cliente)
-            //{
-            //    if (cliente.DineroDisponible >= vehiculo.Precio && Inventario.ExisteVehiculo(vehiculo))
-            //    {
-            //        Venta nuevaVenta = new Venta()
-            //        {
-            //            VehiculoVendido = vehiculo,
-            //            Cliente = cliente,
-            //            PrecioVenta = vehiculo.Precio,
-            //            FechaVenta = DateTime.Now
-
-            //        };
-
-            //        VentasRealizadas.Add(nuevaVenta);
-            //        cliente.ComprarVehiculo(vehiculo, Inventario);
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Verifique tener el monto o que el vehiculo se encuentre disponible");
-            //    }
-            //}
-
-            //public void MostrarHistorialVentas()
-            //{
-            //    foreach (var venta in VentasRealizadas)
-            //    {
-            //        venta.MostrarDetalleVenta();
-            //    }
-            //}
-
-        }
+       
 
         public void MostrarDetalleVenta()
         {
