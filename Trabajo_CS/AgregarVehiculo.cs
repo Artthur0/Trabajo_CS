@@ -115,6 +115,10 @@ namespace Trabajo_CS
 
         private void AgregarVehiculo_Load(object sender, EventArgs e)
         {
+            GlobalVar.veh.Add(new Vehiculos() { Marca = "Toyota", Modelo = "Corolla", Año = 2020, Kilometraje = 50000, Precio = 15000 });
+            GlobalVar.veh.Add(new Vehiculos() { Marca = "Honda", Modelo = "Civic", Año = 2018, Kilometraje = 40000, Precio = 12000 });
+            GlobalVar.veh.Add(new Vehiculos() { Marca = "Ford", Modelo = "Focus", Año = 2019, Kilometraje = 30000, Precio = 13000 });
+
             listView1.View = View.Details;
             listView1.GridLines = true;
             listView1.Columns.Add("Marca");

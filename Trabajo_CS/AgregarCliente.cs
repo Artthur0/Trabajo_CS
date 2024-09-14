@@ -87,6 +87,10 @@ namespace Trabajo_CS
 
         private void AgregarCliente_Load(object sender, EventArgs e)
         {
+            GlobalVar.client.Add(new Cliente() { Id = "1", Nombre = "Juan", Apellidos = "Pérez", DineroD = 1500.00M });
+            GlobalVar.client.Add(new Cliente() { Id = "2", Nombre = "Ana", Apellidos = "García", DineroD = 2000.00M });
+            GlobalVar.client.Add(new Cliente() { Id = "3", Nombre = "Luis", Apellidos = "Ramírez", DineroD = 2500.00M });
+
             lvClienteLista.View = View.Details;
             lvClienteLista.GridLines = true;
             lvClienteLista.Columns.Add("Id");
