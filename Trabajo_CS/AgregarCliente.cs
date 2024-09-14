@@ -52,7 +52,7 @@ namespace Trabajo_CS
             }
 
             decimal D;
-            bool isOk = decimal.TryParse(txDineroD.Text,out D);
+            bool isOk = decimal.TryParse(txDineroD.Text, out D);
             if (!isOk)
             {
                 MessageBox.Show("Ingresa dinero valido");
@@ -129,6 +129,7 @@ namespace Trabajo_CS
         {
             this.Close();
         }
-    }
+    } 
 }
+
 
