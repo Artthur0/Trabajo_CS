@@ -133,5 +133,37 @@ namespace Trabajo_CS
         {
             this.Close();
         }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                int index = listView1.SelectedItems[0].Index;
+                GlobalVar.veh.RemoveAt(index); // Eliminar el vehículo de la lista
+                MessageBox.Show("Vehículo eliminado");
+                ListarVehiculos(); // Actualizar la lista
+            }
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                int index = listView1.SelectedItems[0].Index;
+                Vehiculos vehiculoModificar = GlobalVar.veh[index];
+
+                // Cargar los datos del vehículo seleccionado en los TextBoxes para su modificación
+                tx_mar.Text = vehiculoModificar.Marca;
+                tx_mod.Text = vehiculoModificar.Modelo;
+                tx_year.Text = vehiculoModificar.Año.ToString();
+                tx_kil.Text = vehiculoModificar.Kilometraje.ToString();
+                tx_pre.Text = vehiculoModificar.Precio.ToString();
+
+                // Remover el vehículo actual de la lista antes de modificarlo
+                GlobalVar.veh.RemoveAt(index);
+
+                MessageBox.Show("Modifica los datos y vuelve a guardar.");
+            }
+        }
     }
 }
