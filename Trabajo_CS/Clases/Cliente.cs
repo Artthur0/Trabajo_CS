@@ -36,19 +36,7 @@ namespace Trabajo_CS.Clases
         {
             return $"{Nombre} - {Apellidos} - {DineroD}";
         }
-        public void ComprarVehiculo(Vehiculos vehiculo, Inventario inventario)
-        {
-            if (DineroD >= vehiculo.Precio && inventario.ExisteVehiculo(vehiculo))
-            {
-                inventario.EliminarVehiculo(vehiculo);
-                DineroD = DineroD - vehiculo.Precio;
-                Console.WriteLine($"{Nombre} {Apellidos} compró el auto {vehiculo.Marca} {vehiculo.Modelo}");
-            }
-            else
-            {
-                Console.WriteLine("Compra Fallida. Verifica el inventario o el dinero disponible");
-            }
-        }
+
 
         public void clientes(){
         

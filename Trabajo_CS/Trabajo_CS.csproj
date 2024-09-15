@@ -52,8 +52,6 @@
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Cliente.cs" />
-    <Compile Include="Clases\Concesionario.cs" />
-    <Compile Include="Clases\Inventario.cs" />
     <Compile Include="Clases\Vehiculos.cs" />
     <Compile Include="Clases\Ventas.cs" />
     <Compile Include="AgregarCliente.cs">
